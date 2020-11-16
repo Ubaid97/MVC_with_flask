@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, redirect, url_for
+from flask import Flask, jsonify, redirect, url_for, render_template
 
 # create an instance of our app
 app = Flask(__name__)
@@ -31,6 +31,7 @@ def greet_user():
 # this will add this API/URL to http://127.0.0.1:5000/api/v1/student/data
 def customised_api():
     return jsonify(students) # transforms data into json
+
     # Using Extract Transform Load
 
 
@@ -44,6 +45,13 @@ def welcome_user(username):
     return f"<h1>Welcome to the team {username}</h1>"
 
 
+@app.route("/index/")
+def index():
+    return render_template("index.html")
+
+# @app.route("/base/")
+# def index():
+#     return render_template("base.html")
 
 
 if __name__ == "__main__":

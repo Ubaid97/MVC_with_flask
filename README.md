@@ -70,3 +70,9 @@ def login():
     return redirect(url_for("greet_user"))
 ```
 - going on the login page will redirect user to the welcome page
+
+**Interacting with HTML**
+- Naming conventions are essential
+- We need to create a templates folder in our directory
+- flask looks for templates folder and anything inside that folder
+- we will create index.html inside the templates folder

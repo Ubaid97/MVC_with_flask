@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+  <title>Index</title>
+{% endblock %}
+{% block body %}
+<h1/> Index page </h1>
+
+<form>
+  <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+  <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+  <input type="submit" class="fadeIn fourth" value="Log In">
+</form>
+
+<div id="demo"></div>
+<script>
+var x ="", i;
+for (i=1; i<=10; i++) {
+  x = "<p>" + i + "</p>;
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+{% endblock %}
